@@ -148,4 +148,4 @@ If you want to contribute to this project and make it better, your help is very 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
