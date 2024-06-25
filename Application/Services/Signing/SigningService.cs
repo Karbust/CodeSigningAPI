@@ -47,6 +47,8 @@ public class SigningService(
         {
             signFileRequestViewModel.Algorithms = signingOptions.Value.Algorithms.ToList();
         }
+        
+        var originalHash = FileHash.SHA256CheckSum(signFileRequestViewModel.FilePath);
 
         foreach (var algorithm in signFileRequestViewModel.Algorithms)
         {
@@ -88,7 +90,7 @@ public class SigningService(
                     var codeSigning = new CodeSigning
                     {
                         FileName = signFileRequestViewModel.FileName,
-                        OriginalHash = "teste",
+                        OriginalHash = originalHash,
                         SignedHash = hash,
                         Algorithm = algorithm,
                         SignedBy = authToken,
